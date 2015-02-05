@@ -1,0 +1,46 @@
+
+<?php
+
+	
+		$n =  new MongoClient(); 	
+		$dbname = "wsd"; 	
+		$db = $n->$dbname; //get the collections.. 
+     	$collection = $db->raretweets; 
+		$collection2 = $db->raretweets;
+		
+
+			if ( isset($_POST['input'])) {
+							$keyword = $_POST['input'];
+										}
+	
+
+
+		$regex = "/".$keyword."/i";
+
+
+
+		$regexObj = new MongoRegex($regex);
+		$where = array("text" => $regexObj); 
+		$cursor =$collection->find($where);
+		$jsonString = array();
+		while ( $cursor->hasNext() ) {
+				$document = $cursor->getNext();
+                $id = $document['id'];
+				$text = $document['text'];
+				$entities = $document['entities'];
+				if (isset($entities['media'])) {
+						$media  = $entities['media'];
+						$img = $media[0]["media_url"];
+						$html  =  $html."<div>";
+						$html = $html."<p>".$text."</p>";
+						$html = $html."<br>";
+						$html = $html."<img src=".$img.">";
+						$html = $html."</div>";
+						echo $html;
+						$jsonString[] = array("id"=>$id,"text"=>$text,"imgUrl"=>$img);
+					}
+		 	
+		}
+	//	echo json_encode($jsonString);
+?>
+

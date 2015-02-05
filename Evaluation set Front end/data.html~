@@ -1,0 +1,65 @@
+
+
+
+<html>
+<head>
+		
+		<title>Select Keywords </title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div align="center">
+	<h1> Choose the keywords from dropdown menu</h1>
+</div>
+<div id="dropdown" align="center">	
+<!--  <form action="tweets.html" method="post">   --!>
+
+	<select align="center" name="input"  onchange="showUser(this.value)"> 
+    <option value="">Select a keyword</option>
+	<option value="band">band</option>  
+	<option value="bet">bet</option> 
+	<option value="deaf">deaf</option> 
+	<option value="float">float</option>
+	<option value="giant">giant</option> 
+	<option value="hurdle">hurdle</option> 
+	<option value="knee">knee</option>
+	<option value="onion">onion</option>
+	<option value="promise">promise</option> 
+	<option value="rabbit">rabbit</option> 
+	<option value="sack">sack</option> 
+	<option value="shirt">shirt</option>  
+	<option value="steer">steer</option>
+	<option value="wooden">wodden</option> 
+	<option value="bank">bank</option>
+	<option value="bass">bass</option> 
+	<option value="chip">chip</option> 
+	<option value="clip">clip</option> 
+	<option value="court">court</option> 
+	<option value="crane">crane</option> 
+	<option value="game">game</option> 
+	<option value="hood">hood</option> 
+	<option value="jack">jack</option>  
+	<option value="key">key</option> 
+	<option value="mold">mold</option> 
+	<option value="mouse">mouse</option> 
+	<option value="plant">plant</option>  
+	<option value="press">press</option> 
+	<option value="seal">seal</option> 
+	<option value="speaker">speaker</option>  
+	<option value="squash">squash</option> 
+	<option value="track">track</option>
+</select>
+ <!-- <input type="submit" name="formSubmit" value="Submit" >  --!>
+</div>
+
+			<script>
+				function showUser(str) {
+						 document.getElementById("center").innerHTML="you choose nothing?";
+						 return;
+				}
+  
+		 </script>
+</body>
+
+</html>
