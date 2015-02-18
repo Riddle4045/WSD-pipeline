@@ -1,0 +1,4 @@
+image: image.cpp
+	g++ -o image image.cpp -L. -lstemmer -lpthread;
+clean:
+	rm image

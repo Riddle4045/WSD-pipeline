@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>UF Word Sense Disambiguation Project</title>
+        <meta name="description" content="UF Image Text dataset" />
+        <meta name="keywords" content="UF Image Text (UFIT) dataset" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            input[type="text"]
+            {
+                font-size:18px;
+            }
+            input[type="submit"]
+            {
+                font-size:18px;
+            }
+        </style>
+        
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="fancybox/lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
+        <script>
+            
+            var demo_status = 0;  //0 for inactive, 1 for active, 2 for pause.
+            var root = null;  //client root address.
+            var refreshIntervalId;
+            var avaliable_senses = [];
+            var confirmed_senses = [];
+            var word_to_be_disambiguated = null;
+            var num_file_uploaded = 0;
+            
+                    //cleanup signal.
+                    $.post("clean_upload.php",
+                    {
+                        root:root
+                    },
+                    function(server_output, status){
+                        window.onbeforeunload = null;
+                        document.getElementById("word_submit").disabled = false; //disable control.
+                        document.getElementById("word_data").disabled = false; //disable control.
+                        document.getElementById("upload_data").disabled = false; //disable control.
+                    });
+            
+            function confirm_senses(){
+                for (i = 0; i < avaliable_senses.length; i++) {
+                    if($("#"+avaliable_senses[i]).is(":checked"))
+                        confirmed_senses.push(avaliable_senses[i]);
+                }
+                $("body").css("cursor", "progress");
+                demo_status = 1; //set it as 1 to continue refresh.
+                update_display();
+                $.post("download_senses.php",
+                        {
+                            word: word_to_be_disambiguated,
+                            root: root,
+                            senses: confirmed_senses,
+                            all_senses: avaliable_senses
+                        },
+                function (server_output, status) {
+                    demo_status = 0;  //done: set it as 0.
+                    /*Finish demo*/
+                    $("body").css("cursor", "default");
+                    $.get("load_embedded.php", function (data, status) {
+                        document.getElementById("display").innerHTML = data;
+                        document.getElementById("confirmation").disabled = true;
+                    });
+                    confirmed_senses = [];
+                    //cleanup signal.
+                    $.post("cleanup.php",
+                            {
+                                root: root
+                            },
+                    function (server_output, status) {
+                        window.onbeforeunload = null;
+                        document.getElementById("word_submit").disabled = false; //disable control.
+                        document.getElementById("word_data").disabled = false; //disable control.
+                        document.getElementById("upload_data").disabled = false; //disable control.
+                    });
+                });
+            }
+
+            function discover_senses(word) {   
+                $.post("get_senses.php",
+                        {
+                            word: word,
+                            root: root
+                        },
+                function (server_output, status) {
+                    /*Sense discovery done: Wait for user confirm senses.*/
+                    $.get("load_embedded.php", function (data, status) {
+                        document.getElementById("display").innerHTML = data;
+                        avaliable_senses = $.parseJSON(server_output);  //discovered senses.
+                        $("body").css("cursor", "default");  //change into default status.
+                    });
+                    demo_status = 2;
+                });
+            }
+
+            function update_display() {
+                $.get("load_embedded.php", function (data, status) {
+                    document.getElementById("display").innerHTML = data;
+                    if (demo_status === 1)
+                        update_display();
+                    document.getElementById("confirmation").disabled = true;
+                });
+            }
+
+            function send_ping() {
+                $.post("ping.php",
+                        {
+                            ping: 'ping'
+                        },
+                function (server_output, status) {
+                });
+            }
+
+            function send_word() {
+                var word = document.getElementById("word_data").value;
+                $.post("demo.php",
+                        {
+                            data: word,
+                            upload:num_file_uploaded
+                        },
+                function (server_output, status) {
+                    if (server_output.substring(0, 1).localeCompare("-") === 0) {
+                        root = server_output.substring(1, server_output.length);
+                        demo_status = 1;
+                        window.onbeforeunload = function (e) {
+                            var message = "WSD: You have an active running demo. Your job will abort if you leave this page.",
+                                    e = e || window.event;
+                            // For IE and Firefox
+                            if (e) {
+                                e.returnValue = message;
+                            }
+
+                            // For Safari
+                            return message;
+                        };
+
+                        $("body").css("cursor", "progress");  //change into waiting status.
+                        document.getElementById("word_submit").disabled = true; //disable control.
+                        document.getElementById("upload_data").disabled = true; //disable control.
+                        document.getElementById("word_data").disabled = true; //disable control.
+                        word_to_be_disambiguated = word;
+                        update_display();  //update display whenever changed.
+                        refreshIntervalId = setInterval(function ()
+                        {  //send ping signas every 2 seconds.
+                            send_ping();
+                        }, 2000);
+                        discover_senses(word);
+                    } else
+                        alert(server_output);
+                });
+            }
+
+        </script>
+
+    </head>
+
+
+    <body style="background-color:rgb(235,235,235);">
+        <div style="font-size:20px" align="center">
+            <div style="width:1200px;" align="left">
+                <header>
+                    <h2>UF Word Sense Disambiguation Project</h2>	
+                </header>
+                <div style="min-height:2300px;background-color:#FFF;padding-left: 0.5cm;padding-top: 0.25cm;">
+
+                    <div style="padding-top: 0.3cm;padding-left: 0.2cm;line-height:160%;float:left">
+                        <img src="University_of_Florida_seal.png">
+                        <ul>
+                            <li class="current"><a href="wsd.html">Home</a></li>
+                            <li><a href="wsd.html#examples">Examples</a></li>
+                            <li><a href="wsd.html#demo">Demo</a></li>
+                            <li><a href="wsd.html#members">Members</a></li>
+                            <li><a href="wsd.html#contact">Contact</a></li>
+                            <li><a href="http://dsr.cise.ufl.edu/" target="_blank">DSR Lab</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="line-height:150%;padding-left: 5.5cm;padding-top: 1.8cm;padding-right: 2cm;text-align: justify;height:300px" align="left">
+ 
+                    </div>
+                    <div style="line-height:150%;padding-left: 5.5cm;padding-top: 0cm;padding-right: 2cm;text-align: justify;" align="left">
+                        <hr />
+                    </div>
+                    <div style="line-height:150%;padding-left: 0.3cm;padding-top: 0cm;padding-right: 2cm;text-align: justify;" align="left">
+                        <a name="examples"></a>
+                        <h4>Example Ambiguous Words:</h4>
+                        <table style="padding-left: 0.5cm" cellpadding="15" align="center">
+                            <tr>
+                                <td>
+                                    <table cellspacing="10" style="border:0px dashed #000;">
+                                        <tr><td><img src="examples/bank-building.jpg" height="120" /></td><td><img src="examples/bank_river_side.jpg" height="130" /></td></tr>
+                                        <tr align="center"><td colspan="2"><b>Bank:</b> Building vs. River Side</td></tr>
+                                    </table>
+                                <td>
+                                <td>
+                                    <table cellspacing="10" style="border:0px dashed #000;">
+                                        <tr><td><img src="examples/crane_machine.jpg" height="130" /></td><td><img src="examples/crane_animal.png" height="130" /></td></tr>
+                                        <tr align="center"><td colspan="2"><b>Crane:</b> Machine vs. Animal</td></tr>
+                                    </table>
+                                <td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <table cellspacing="10" style="border:0px dashed #000;">
+                                        <tr><td><img src="examples/apple_inc.jpg" height="130" /></td><td><img src="examples/apple_fruit.jpg" height="130" /></td></tr>
+                                        <tr align="center"><td colspan="2"><b>Apple:</b> Incorporation vs. Fruit</td></tr>
+                                    </table>
+                                <td>
+                                <td>
+                                    <table cellspacing="10" style="border:0px dashed #000;">
+                                        <tr><td><img src="examples/tank_vehicle.jpg" height="130" /></td><td><img src="examples/tank_container.jpg" height="130" /></td></tr>
+                                        <tr align="center"><td colspan="2"><b>Tank:</b> Vehicle vs. Container</td></tr>
+                                    </table>
+                                <td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div style="line-height:150%;padding-left: 0.3cm;padding-right: 2cm;text-align: justify;" align="left">
+                        <a name="demo"></a>
+                        
+                        <h4>Live Demo:</h4>
+                        <p>This section presents a live demo for word sense disambiguation based on text and image information. <br />How to run the demo <span style="color:rgb(255,0,0)">[Safari browser is not supported]</span>:</p>
+                        <ol>
+                            <li>Input an ambiguous word.</li>
+                            <li>Optionally upload your own testing examples for disambiguation. If you upload testing examples, please upload at most 100 images whose names are text containing ambiguous word. If you don't upload any data, we will use our default testing data.</li>
+                            <li>Click 'Run demo' and then select senses of interest to disambiguate.</li>
+                            <li>Wait for server side processing.</li>
+                        </ol>
+                        Testing data: <a href="examples/Twitter.tar.gz">Twitter</a> and <a href="examples/good.data.tar.gz">Google Images</a>
+                        <div style="padding-left: 3.8cm">
+                            <table cellspacing="6">
+                                <tr>
+                                    <td>Ambiguous word: <span style="color:#F00">*</span></td>
+                                    <td><input type="text" name="word" id ="word_data" size="20" placeholder="e.g. bank" />
+                                        &nbsp;
+                                    <td align="center">
+                                        <input type="submit" id="word_submit" value="Run demo" onclick="send_word();"  />
+                                    </td>
+                                    <td><a class="fancybox fancybox.iframe" rel="group" href="fancybox_upload.php"><input type="submit" id="upload_data" value="Upload data"  /></a></td>
+                                    <td id="files_uploaded">#Files uploaded: 0</td>
+                                </tr>          
+                            </table>
+                        </div>
+                        <div id="display" style="border: 1px solid;font-size:14pt; color:rgb(0,0,255);width:1100px;min-height:600px; overflow:auto; margin-left:15px;box-shadow: 4px 4px 2px #888888;text-indent: 0.5em; border-color: rgb(0,0,0);"></div>
+                    </div>
+
+                    <div style="line-height:150%;padding-left: 0.3cm;padding-right: 2cm;text-align: justify;" align="left">
+                        <a name="members"></a>
+                        <h4>Members:</h4>
+                        <p>Adviser: Daisy Zhe Wang</p>
+                        <p>Students (listed alphabetically): Dihong Gong, Ishan Patwa, Yang Peng</p>
+
+                    </div>
+
+                    <div style="line-height:150%;padding-left: 0.3cm;padding-right: 2cm;text-align: justify;" align="left">
+                        <a name="contact"></a>
+                        <h4>Contact:</h4>
+                        <p>Questions and comments can be sent to:<br />
+                            Dihong Gong - dihong@cise.ufl.edu</p>
+                        <p> <br /> </p>
+                    </div>
+                </div>
+
+            </div><!--close main-->
+        </div>
+
+
+        <table align="center" width="1200px" cellspacing="25px">
+            <tr align="center">
+                <td><a href="wsd.html" style="text-decoration:none;">HOME</a></td>
+                <td><a href="wsd.html#examples" style="text-decoration:none;">EXAMPLES</a></td>
+                <td><a href="wsd.html#demo" style="text-decoration:none;">DEMO</a></td>
+                <td><a href="wsd.html#members" style="text-decoration:none;">MEMBERS</a></td>
+                <td><a href="wsd.html#contact" style="text-decoration:none;">CONTACT</a></td>
+                <td><a href="http://dsr.cise.ufl.edu/" target="_blank" style="text-decoration:none;">DSR LAB</a></td>
+            </tr>
+        </table>
+    </body>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('a.fancybox').fancybox({
+                    'closeBtn' : false,
+                    'closeClick' : false,
+                    'autoHeight' : true,
+                    'minHeight' : 380,
+                    'width' : 650,
+                    'margin' : 0,
+                    'padding' :0,
+                    'type' : 'iframe',
+                            helpers   : { 
+                             overlay : {closeClick: false} // prevents closing when clicking OUTSIDE fancybox 
+                            }
+                    });
+
+        });
+    </script>
+</html>
