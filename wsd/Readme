@@ -1,0 +1,9 @@
+This folder contains codes for training of classifiers based on Google Image search engine.
+
+How it works:
+
+1) User provides a text keyword, e.g. "Apple".
+2) Download at most 110 images per sense from Google.
+3) Train text classifiers using Yarosky's algorithm.
+4) Train K-means model for image classification.
+5) Predict the sense of object based on both text and image scores.
