@@ -6,6 +6,7 @@ import os
 import subprocess
 from nltk.corpus import wordnet as wn
 from nltk.stem import PorterStemmer
+from subprocess import call
 
 
 #checking for  query_word arguments..
@@ -31,7 +32,12 @@ with open("synset_list.txt") as synset_list:
 query_word = sys.argv[1];
 query_synsets = wn.synsets(query_word);
 #make the folder from the keyword.
-os.makedirs(query_word);
+file_exist = os.path.exists(query_word) 
+if(file_exist):
+		call(["rm","-rf",query_word])
+		os.makedirs(query_word);
+else:
+		os.makedirs(query_word)
 
 print "Fectching Synsets and Definitionsfrom WordNet.."
 wordNet_Synset = {};
@@ -73,7 +79,7 @@ for key in matching_wnids:
 
 
 result[sys.argv[1]] = {"wordnet" : query_offsets , "imageNet" : imageNet_Syn_names};
-
+print result
 def getImages(key,folder_path):
 			url = base_image_url + key
 			print url
