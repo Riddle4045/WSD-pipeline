@@ -1,0 +1,791 @@
+<html>
+
+<head>
+<title>Jungle Bass</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Microsoft Border" content="tb">
+</head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<center>
+<table border="0" cellpadding="0" cellspacing="0" height="62" width="100">
+  <tr>
+    <td height="62" width="287"><a href="../../index.shtml" target="_top"><img border="0" src="../../images/abassdozer.gif" width="287" height="62"></a></td>
+    <!--<td height="62" width="468">
+<applet code="fprotate.class" codebase="../" width="468" height="60">
+<param name="rotatoreffect" value="boxOut">
+<param name="time" value="4">
+<param name="url" valuetype="ref" value="../bass_sponsors.shtml">
+<param name="image1" valuetype="ref" value="../images/northernbass-luckycraft.gif">
+<param name="image2" valuetype="ref" value="../images/tti-banner.gif">
+<param name="image3" valuetype="ref" value="../images/yamamoto-banner-flat.gif">
+<param name="image4" valuetype="ref" value="../images/be-the-best-banner.gif">
+<param name="image5" valuetype="ref" value="../images/carpecarpio-banner2.jpg">
+</applet>
+</td> -->
+  </tr>
+</table>
+</center>
+<table border="2" cellpadding="0" bgcolor="#FFCC00" bordercolor="#808000" bordercolorlight="#808000" bordercolordark="#000000" cellspacing="0" width="100%">
+  <tr>
+    <td bordercolor="#FFCC00">
+      <p align="center"><font face="Arial" size="1">[ <font color="#FF0000"><a href="http://www.bassdozerstore.com?refid=store" target="_top">Bassdozer's
+Store</a></font> | <a href="http://www.jdoqocy.com/click-1789703-10370841" target="_blank" onmouseover="window.status='http://www.basspro.com';return true;" onmouseout="window.status=' ';return true;">Bass
+Pro Shops</a> | </font><a href="http://clickserve.cc-dt.com/link/click?lid=41000000006570358" target="_blank"><font face="Arial" size="1">Cabela's</font></a><font face="Arial" size="1">
+| </font><a href="http://www.landbigfish.com/affiliates/welcome.cfm?SiteID=1114&amp;LinkID=2" style="color:blue" target="_blank"><font face="Arial" size="1">LandBigFish.com</font></a><font face="Arial" size="1">
+| <a href="../../bass_lures.shtml" target="_top">Lures, Rods, Reels</a>
+| <a href="../../bass_boats.shtml" target="_top">Boats, Motors,
+Electronics</a> | <a href="../../articles.shtml" target="_top">Expert
+Articles</a> | <a href="../../bass_reports.shtml" target="_top">Reports</a>
+| <a href="../../states/state_fishing.shtml" target="_top">States</a> | <a href="../../bass-fishing-news.shtml" target="_top">News</a>
+| <a href="../../bass_forum_boards.shtml" target="_top">Forums</a> |
+      <a href="../../bass_tournaments.shtml" target="_top">Tournaments</a>
+| <a href="../../bass_clubs.shtml" target="_top">Clubs</a> | <a href="../../bass_federations.shtml" target="_top">Federations</a>
+| <a href="../../bass_fishing_guides.shtml" target="_top">Guides</a>
+| <a href="../../bass_links.shtml" target="_top">Links</a> | <a href="../../books/fishing_books.shtml" target="_top">Books</a>
+| <a href="../../bass-fishing-magazines.shtml" target="_top">Magazines</a> | <a href="../../surf_fishing.shtml" target="_top">Surf
+Fishing</a> | <a href="../../about_us.shtml" target="_top">About Us</a>&nbsp;
+| <a href="../../disclaimer.shtml" target="_top">Terms of Use</a> ]</font></p>
+    </td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="left" width="20%"><img src="../../images/jb_spence.jpg" alt="National Freshwater Fishing Hall of Famer Spence Petros of Chicago admires a trophy 18 pound tucunare (the Brazilian term for peacock bass). " width="133" height="200"></td>
+          <td align="center" width="60%">
+            <h1 align="center">JUNGLE BASS<br>
+            <small><small>The Trophy Tucunare</small> <small>of Brazil's Rio
+Negro</small></small><big><br>
+            </big><small><small><small>by Gary Laden*</small></small></small></h1>
+          </td>
+          <td align="right" width="20%"><img src="../../images/jb_gary.jpg" alt="Author Gary Laden lands a giant peacock bass during his fishing excursion to Brazil's Rio Negro Lodge." width="161" height="200"></td>
+        </tr>
+      </table>
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="4" cellspacing="0" width="90%">
+          <tr>
+            <td width="100%"><font color="#808000"><strong><big>As we motored
+along Brazil's Rio Negro,</big></strong></font> the largest
+tributary of the mighty Amazon River, the keen eyes of our savvy
+Amazon Indian guide, somehow, detected a minute opening in the
+jungle foliage where none appeared to exist. Ajilson idled the
+18-foot Nitro bass boat towards the dense rain forest and, after
+motoring through a narrow opening between two massive trees, we
+suddenly found ourselves swallowed up by the thick jungle
+foliage.
+              <p><font color="#808000"><strong><big>A tiny creek, barely wider
+than our boat,</big></strong></font> had been discovered by our
+guide, affectionately called &quot;Popcorn&quot; by American
+anglers since 1993. The creek snaked its way deep into the
+verdant green forest and we could detect by his excited demeanor
+that Popcorn was eager to venture ahead.</p>
+              <p><font color="#808000"><strong><big>We probed deeper into the
+rain forest,</big></strong></font> an area that possibly only a
+few Indians had passed before us. My fishing partner Spence
+Petros and I began questioning the sanity of this angling
+expedition, as well our guide's sense of direction. Did Popcorn
+really have a clue as to where this never-ending labyrinth of
+branching creeks would lead?</p>
+              <p><font color="#808000"><strong><big>Surely no one could
+possibly ever find us</big></strong></font> if we really were to
+get lost or break down. Would we fall victim to poison darts and
+arrows from a tribe of cannibalistic Indians whose secret burial
+grounds were desecrated by our presence? Our trepidations were
+further enhanced when a smiling Popcorn pulled the two-foot long
+sharply honed machete from its sheath that hung from his
+belt.&nbsp;</p>
+              <p><font color="#808000"><strong><big>&quot;Eat Spence
+first,&quot; I shouted</big></strong></font> to our guide, my
+voice quivering in a feigned frightened pitch, &quot;he's got
+much more meat on his bones than me!&quot; Fortunately we were
+not on the menu that morning, and Popcorn used the machete not to
+carve &quot;filet of gringo,&quot;&nbsp; but rather to hack
+through dense overgrowth, rope-like vines and toppled trees, some
+as thick as 14 inches in diameter, that blocked our path on this
+small creek. After approximately an hour of motoring a boat
+through terrain where few American bass anglers would dare to
+travel, suddenly, Ajilson ceased his incessant hacking, wiped his
+machete clean and gently placed it&nbsp; back in its sheath. To
+our delight, the narrow creek had lead us to a large lagoon that
+must have been at least 25 acres in size and offered an average
+depth of four feet.</p>
+              <p>Popcorn gestured for us to pick up our rods and begin fishing.
+&quot;Muito tucunare,&quot; he said. My Portuguese is decent
+enough to know that the guide was referring to the fact that the
+lagoon was loaded with tucunare (pronounced too-coo-na-ray), the
+Brazilian term for peacock bass, and they probably have never
+been tempted by an artificial lure before.&nbsp;</p>
+              <p><font color="#808000"><strong><big>&quot;Should have had a
+fish on that cast,&quot;</big></strong></font> Spence muttered to
+himself after accurately casting the big Wood Chopper surface
+plug within an inch of the main trunk of a thickly branched tree
+that lay toppled in the water. Although the fish failed to take
+his offering as he rapidly retrieved it by the fallen tree, it
+must have piqued its interest enough to entice him to follow the
+plug back to the boat.</p>
+              <p>Unfortunately, the world class angler and fishing magazine
+editor from Chicago wasn't aware that the fish was&nbsp; about to
+wreak havoc on his topwater lure. The resultant collision of fish
+and lure occurred just six feet from<br>
+the boat. The spectacular strike and subsequent drag peeling run
+occurred so rapidly that it was out of shear reflex that Spence
+kept his rod from snapping as it bent over the port-side of the
+boat as he tried to slow the large male down.</p>
+              <p><img src="../../images/jb_landing.jpg" alt="Rio Negro Lodge guide Popcorn lands Spence Petros' trophy peacock bass in a lagoon off of Brazil's Rio Negro (Black River)." align="right" hspace="4" vspace="4" width="200" height="300"><font color="#808000"><strong><big>After
+a two minute battle,</big></strong></font> this three foot long
+package of emerald green fury was on the surface. But the
+tucunare grande (giant peacock bass) wanted no part of Popcorn's
+awaiting net however and he stripped off another 15 yards of drag
+until Spence could turn him once more. Finally, the played out
+fish was captured. The fish weighed 18 pounds on a certified
+scale. He was kept out of water a moment to snap a few photos
+and&nbsp; was released back into the tannin-stained lagoon no
+worse for wear.</p>
+              <p><font color="#808000"><big><strong>Monstrous peacock bass are
+the rule</strong></big></font> rather than the exception on
+Brazil's Rio Negro. In fact, the world record&nbsp; fish (27
+pounds) was landed within a mile from where Spence bagged his 18
+pounder - a peacock tucunare, one of the three major subspecies
+residing in Brazil's Amazon Watershed.</p>
+              <p><font color="#808000"><strong><big>One Tough Hombre. </big></strong></font>Although
+its basic shape demonstrates a close resemblance to the popular
+largemouth bass, the peacock bass is not actually a member of the
+bass family. It belongs to a family of fish known as cichlids,
+one that boasts numerous species worldwide and is well known to
+tropical fish enthusiasts. Like the largemouth bass, the peacock
+prefers to ambush unsuspecting prey from a stealthy vantage point
+and demonstrates a gluttonous appetite. The similarity ends
+there, however. The peacock bass is much more eye appealing than
+its North American counterpart, colorfully adorned in varying
+shades of green, blue, orange and gold. It is much more
+aggressive than the largemouth, often pursuing lures or fleeing
+prey the same size or larger than itself.&nbsp;&nbsp;</p>
+              <p>&quot;The peacock bass routinely&nbsp; breaks lines, shatters
+rods and destroys tackle that would subdue the toughest
+largemouth bass,&quot; says Spence Petros, an inductee into the
+National Freshwater Fishing Hall of Fame. &quot;The peacock bass
+is one special gamefish to have evolved and survived in a
+watershed that contains schools of hungry pirhanas, giant Amazon
+catfish the size of Volkswagens, 12-foot long pirarucu with
+armor-like scales, alligators and an assortment of other unsavory
+characters that possess fangs, teeth and stingers.&quot;</p>
+              <p><font color="#808000"><strong><big>Rio Negro Lodge. </big></strong></font>The
+Rio Negro Lodge, the most comfortable sportfishing facility in
+the Amazon region of South America, opened its doors to anglers
+from throughout the world in October 1998. This spacious retreat,
+located below the jungle canopy on the shores of the Rio Negro,
+was created to provide anglers with the comforts and privacy they
+expected of a luxury resort. The 5,000 square foot air
+conditioned main lodge is centrally located and serves as the
+gathering place for dining and relaxing. Spread along winding
+walkways on either side of the main lodge are nine private
+cabins, each complete with air conditioning, Queen sized beds,
+private bathroom, garden tubs and stocked refrigerator.</p>
+              <p>The Rio Negro Lodge is the brainchild of Phil Marsteller,
+owner of the extremely popular Amazon Queen 85-foot houseboat
+that has hosted anglers since 1992. Marsteller, 43, a former
+military helicopter pilot and<br>
+international&nbsp; airplane broker, knows the Amazon Watershed
+like the back of his hand and specializes in providing anglers
+with hassle-free excursions for giant peacock bass.</p>
+              <p>The location for the Rio Negro Lodge was carefully selected in
+the heart of Brazil's finest peacock bass fishery and only a 20
+minute boat ride from where one of Marsteller's clients, Gerald
+&quot;Doc&quot; Lawson set the all-tackle<br>
+world record. Ten pound fish barely raise an eyebrow; 15 pounders
+are commonplace and 20 pound monsters are landed with great
+regularity in this fertile
+fishery.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>Our group met in Miami, where we boarded a Varig Brazilian
+Airlines 767 jumbo-jet at 9:00 p.m.. Our flight took us, nonstop,
+to Manaus, Brazil, a modern city with a population of two
+million, situated at the confluence of the Rio Negro and the
+mighty Amazon. We were greeted by Marsteller, an American now
+living in Manaus for nine months out of the year, and his staff
+and were taken for a one hour flight to the city of Barcelos. It
+is estimated that more tropical fish are brought to this small
+city from commercial fishermen for export internationally than
+any other location in the world. The Rio Negro lodge is located
+approximately 50 minutes upstream from Barcelos.</p>
+              <p>Following a brief orientation and a hearty breakfast, the
+group began its week long fishing adventure. There are a minimum
+of 20 employees (including guides) associated with the Rio Negro
+Lodge and all have one goal in mind - to offer visiting
+guest/anglers an excellent fishing vacation.<br>
+              <br>
+              <font color="#808000"><big><strong>Prime Time for Tucunare.</strong></big></font>
+The prime time to fish for trophy tucunare on the Rio Negro north
+of Manaus is between the months of November and April. This
+coincides with the Brazilian dry season on the stretch of river
+north of the equator. In May, torrential rains swell the rivers,
+creeks and lagoons of the northern Amazon Watershed. The jungle
+is virtually inundated with thousands of acres of flooding. The
+tucunare can literally hide anywhere and an abundant food source
+is readily available for them in the jungle terrain. High water
+is the most difficult condition to fish for the tucunare. They
+are virtually inaccessible by boats and out of casting range of
+anglers when back up in the trees and vegetation of the flooded
+jungle.</p>
+              <p>In August or September, the rains begin to subside and the
+rivers, creeks and lagoons shrink each day from the receding
+water. This now positions the fish back into areas where they are
+accessible to anglers. By November, the levels are usually low
+enough to provide for prime fishing opportunities in the northern
+Amazon Watershed. Occasionally, however, the rainy season fails
+to abide by schedules and may add unexpected water to the system
+during midseason downpours.</p>
+              <p><img src="../../images/jb_lures.jpg" alt="Large colorful lures are needed to tempt trophy peacock bass in Brazil." align="left" hspace="4" vspace="4" width="300" height="200"><font color="#808000"><strong><big>Tempting
+a Tucunare.</big></strong></font> By far, the most exciting
+aspect of peacock bass fishing is their propensity for
+annihilating large topwater plugs. The very best for trophy
+tucunare include three manufactured by Luhr-Jensen: the Big Game
+Woodchopper; Magnum Jerkin' Sam and new Amazon Ripper (Marsteller's
+personal favorite), as well as the Eatem-Up Monster Prop,
+HighRoller Rip Roller and Temptress Lures Detonator. These large
+surface propeller baits need to be worked aggressively across the
+surface.</p>
+              <p>Your baits should mimic the frantic escape of a fleeing
+baitfish. And baitfish do, indeed,&nbsp; flee in this cauldron of
+predators. In many instances, we observed foot-long silvery
+baitfish beach themselves on sand bars to avoid a nasty demise by
+a school of hungry tucunare on a feeding foray.</p>
+              <p>Cast the big topwater plugs on a stout casting rod, paired
+with a baitcasting reel that possesses the ability to handle 65
+to 80 lb break strength braided line. That's right, 80 lb break
+strength braided line! With the temperament of an injured water
+buffalo and a propensity for ambushing prey from stumps, brush
+and tree root systems, these fish can make easy work of lesser
+diameter lines that are not abrasion resistant. Also, these
+braided lines possess very little stretch, affording anglers much
+less arm fatigue when casting and retrieving large topwater plugs
+a thousand times a day. The braided line is an absolute necessity
+when working large topwater lures.</p>
+              <p>When the topwater action slows and fish will not feed on the
+surface, switch to a jerk bait. Favorites of veteran peacock bass
+anglers include Bomber Long-A Minnows, Luhr-Jensen Javelins,
+Temptress Peacock Minnows and Cordell Red Fins, in chrome color
+patterns with blue or black backs or chartreuse firetiger
+patterns.</p>
+              <div align="center">
+                <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="60%"><img src="../../images/jb_piranha.jpg" alt="The Amazon watershed offers anglers other exotic gamefish like this toothy pirhana, a species only dangerous during low water conditions and limited food source." align="left" hspace="4" vspace="4" width="300" height="200"><font color="#808000"><strong><big>Other
+Exotics.</big></strong></font> In addition to prime peacock bass
+action, anglers will also enjoy catching other unusual jungle
+river predators such as the arawana, pirhana and giant Amazon
+catfish called the pirarara and piraiba.
+                      <p>The arawana, also called the water monkey, will strike lures
+used for peacock bass. It is a prehistoric looking critter with
+an eel-like tail.&nbsp; Pirhanas will also attack baits used for
+peacock bass. Two of the very best pirhana baits are the
+Rat-L-Trap and the 1/4-to-1/2 ounce white bucktail jig. Be sure
+to use wire leader, approximately 6 inches of 20 lb. test, as the
+ferocious dentition of these carnivores will make mincemeat out
+of regular monofilament. If you really want to catch a bunch of
+these toothy critters, I suggest bringing light spinning gear,
+small hooks, wire leader and fish with meat on the
+hook.&nbsp;&nbsp;&nbsp;</p>
+                      <p>The giant Amazon catfish are caught on cut-bait worked on the
+bottom, in or near a drop-off, during the late afternoon and
+early evening hours. You need to bring saltwater gear for these
+fish, as documented catches of fish in excess of 300 pounds are
+not uncommon.</p>
+                      <p><img src="../../images/jb_nitros.jpg" alt="Two anglers are paired with an experienced Brazilian guides and fish out of roomy Nitro bass boats." align="right" hspace="4" vspace="4" width="300" height="200"><font color="#808000"><strong><br>
+                      <big>A Daily Schedule. </big></strong></font>A typical day begins
+with a hearty breakfast and then anglers are paired two to a boat
+with an experienced Brazilian Indian guide. Anglers fish out of
+18-foot fiberglass, fully rigged American made Nitro bass boats,
+equipped with trolling motors, ship to shore radios, swivel seats
+and depth finders.</p>
+                      <p>Anglers can fish through lunch if they desire, or can elect to
+take an&nbsp; hour siesta on a hammock set up in the rain forest
+by the guides after consuming the deli-like sandwiches packed in
+coolers by the Rio Negro Lodge cooking staff. An average fishing
+day is from 6:00 a.m. until 6:00 p.m.</p>
+                      <p>A delightful dinner is served back at the lodge. A tasty array
+of meals are prepared, including shrimp, chicken, beef barbecue,
+steak and fish. Commercially purchased ice made from filtered
+water is always available. The vegetables and fruits are washed
+in filtered water and are safe to consume.&nbsp; After dinner,
+it's time to take advantage of the complimentary bar and possibly
+a quality cigar or two and to reminisce about the ones that got
+away.</p>
+                      <p>There is no need to overpack, as daily laundry service is
+available. Clothes are washed, ironed and folded and neatly
+placed on your bed each day.</p>
+                    </td>
+                    <td width="40%" bgcolor="#FFCC00"><strong><font color="#000000">Travel
+Itinerary</font></strong>
+                      <ul>
+                        <li><small><em><strong>Monday</strong> -&nbsp; Miami to Manaus</em></small></li>
+                        <li><em><small><strong>Tuesday</strong> -&nbsp; Early a.m.
+arrival in Manaus. Change for flight to Barcelos, followed by a
+boat ride to Rio Negro Lodge. Begin fishing!</small></em></li>
+                        <li><em><small><strong>Wednesday</strong> - Fish</small></em></li>
+                        <li><small><em><strong>Thursday</strong> -&nbsp; Fish</em></small></li>
+                        <li><small><em><strong>Friday</strong> -&nbsp; Fish</em></small></li>
+                        <li><small><em><strong>Saturday</strong> -&nbsp; Fish</em></small></li>
+                        <li><small><em><strong>Sunday</strong> -&nbsp; Fish</em></small></li>
+                        <li><small><em><strong>Monday</strong> - Flight back to Manaus.
+Rest of day at leisure. Spend evening in hotel.</em></small></li>
+                        <li><small><em><strong>Tuesday</strong> -&nbsp; Flight back to
+USA</em></small></li>
+                      </ul>
+                      <p><strong>Included in Trip Package</strong></p>
+                      <ul>
+                        <li><em><small>6 Days of Fishing</small></em></li>
+                        <li><em><small>Lodging at Rio Negro Lodge</small></em></li>
+                        <li><em><small>All Meals</small></em></li>
+                        <li><em><small>Open Bar</small></em></li>
+                        <li><em><small>Soft Drinks &amp; Bottled Water</small></em></li>
+                        <li><em><small>Boats &amp; Guide</small></em></li>
+                        <li><em><small>Fishing Permits</small></em></li>
+                        <li><em><small>Hotel stay in Manaus</small></em></li>
+                        <li><em><small>Ground Transfers</small></em></li>
+                      </ul>
+                      <p><strong>Not Included in Trip Package</strong></p>
+                      <ul>
+                        <li><em><small>Airport departure tax</small></em></li>
+                        <li><em><small>Gratuities</small></em></li>
+                        <li><em><small>Air Fare to Manaus</small></em></li>
+                        <li><em><small>Tackle items purchased</small></em></li>
+                      </ul>
+                      <p><strong>Booking Information</strong></p>
+                      <p><small>QUEST! Global Angling Adventures<br>
+                      <em>3595 Canton Highway<br>
+Suite C-11<br>
+Marietta, Georgia&nbsp; 30066</em></small></p>
+                      <p><em><small>Phone (Toll Free): 1-888-891-FISH<br>
+E-mail: <a href="mailto:Questhook@AOL.COM" target="_top">Questhook@AOL.COM</a></small></em></p>
+                      <p><strong>Trip Summary</strong></p>
+                      <p><em><small><strong>Boats</strong> - 18-foot fiberglass
+American made Nitro bass boats with 75 hp Mariner outboards.
+Trolling motors, depthfinders, swivel seats and ship to shore
+radios.</small></em></p>
+                      <p><em><small><strong>Food</strong> - Tasty breakfasts and
+dinners (all you care to eat). Lunch consists of thick cold cut
+sandwiches on the water. Coolers are packed with water, beer and
+soft drinks and filled to the top with ice. Open bar.</small></em></p>
+                      <p><small><em><strong>Insects</strong> - Mosquitoes are not a
+factor in&nbsp; the Amazon Watershed. The blackwater river system
+found here is not&nbsp; conducive to mosquito growth.</em></small></p>
+                      <p><em><small><strong>Travel Precautions</strong> - Check with a
+travel medicine clinic for necessary inoculations and
+anti-malarial medications. We will provide you with the latest
+data from the Centers for Disease Control.</small></em></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <p><font color="#808000"><strong><big>Without question, </big></strong></font>the
+Rio Negro Lodge is the most comfortable way to fish the tropical
+climate of the Amazon Watershed.</p>
+              <p>Weekly trips to the Rio Negro Lodge and the Amazon Queen are
+booked to 90% capacity one year in advance. If you would like to
+fish the Amazon Watershed at the Rio Negro Lodge, anglers should
+consider booking 8 to 12 months in advance.</p>
+              <p align="center"><img src="../../images/jb_yard.jpg" alt="Outside view of the luxurious Rio Negro Lodge, the most comfortable fishing facility in the Amazon region of South America." hspace="4" vspace="4" width="300" height="200">&nbsp;&nbsp;
+              <img src="../../images/jb_room.jpg" alt="Inside view of the spacious cabins that host two anglers" hspace="4" vspace="4" width="300" height="200">
+&nbsp;</p>
+              <hr>
+              <p><i>* Gary Laden can be read in just about every fresh water
+fishing publication in America and several overseas. He is the
+former fishing columnist for the Atlanta Journal newspaper. He is
+a contributing writer to the IGFA World Record Book. Gary is the
+angling travel editor for America Online's Fishing Broadcast
+Network (FBN). If you have any specific questions about the Rio
+Negro Lodge, please contact Gary at <a href="mailto:Fishwriter@aol.com" target="_top">Fishwriter@aol.com</a></i></p>
+            </td>
+          </tr>
+        </table>
+        </center>
+      </div>
+&nbsp;
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="4" cellspacing="0">
+    <tr>
+      <td align="center" valign="bottom"><a href="http://www.bassdozerstore.com?refid=store" target="_top"><img border="1" src="../../images/bassdozerstore120x60.gif" alt="Shop Now at Bassdozer's eBay Store" width="120" height="60"><br>
+        </a><a href="http://www.bassdozerstore.com?refid=store" onmouseover="window.status='http://stores.ebay.com/Bassdozer-Store';return true;" onmouseout="window.status=' ';return true;" target="_top"><b><font color="#FF0000">Bassdozer's
+Store</font></b></a></td>
+      <td align="center" valign="bottom"><SCRIPT type="text/javascript" LANGUAGE="javascript" src="http://www.qksz.net/1e-dbp5"></SCRIPT><br>
+        <a href="http://www.jdoqocy.com/click-1789703-10370841" target="_blank" onmouseover="window.status='http://www.basspro.com';return true;" onmouseout="window.status=' ';return true;"><b><font color="#FF0000">Bass
+Pro Shops</font></b></a></td>
+      <td align="center" valign="bottom"><a href="http://clickserve.cc-dt.com/link/click?lid=41000000006570364" target="_blank" onmouseover="window.status='http://www.cabelas.com';return true;" onmouseout="window.status=' ';return true;"><img src="http://clickserve.cc-dt.com/link/banner?lid=41000000006570364" border="1" alt="Shop Now at Cabela's"><br>
+        </a><a href="http://clickserve.cc-dt.com/link/click?lid=41000000006570358" target="_blank" onmouseover="window.status='http://www.cabelas.com';return true;" onmouseout="window.status=' ';return true;"><b><font color="#FF0000">Cabela's</font></b></a></td>
+      <td align="center" valign="bottom"><a href="http://www.landbigfish.com/affiliates/welcome.cfm?SiteID=1114&amp;LinkID=1" target="_blank" onmouseover="window.status='http://www.landbigfish.com';return true;" onmouseout="window.status=' ';return true;"><img src="http://www.landbigfish.com/images/adbanners/lbf120-60.gif" border="1" alt="Shop Now at Landbigfish.com" width="120" height="60"><br>
+        <b><font color="#FF0000">LandBigFish.com</font></b></a></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<p align="center"><b><font color="#808000" face="Arial" size="3">May
+I ask you for a favor please?</font></b><font face="Arial" size="2">
+Please start here first whenever you shop online. Click on any
+store logo above or <b><font color="#FF0000">Amazon.com</font></b>
+book below. <font color="#808000"><strong><i>Bass</i>dozer</strong></font>
+gets a small sales commission if you begin shopping at these
+stores from here. You always get the same low price you would pay
+anyway. </font><b><font color="#808040" face="Arial" size="3">Thank
+you kindly for shopping at <i>Bass</i>dozer.</font></b></p>
+<div align="center">
+  <center>
+  <table border="1" cellpadding="0" cellspacing="0" width="90%" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+    <tr>
+      <td valign="top" align="center" width="126">
+        <p align="center"><a href="http://www.amazon.com/exec/obidos/ASIN/0965040909/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/0965040909.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="69" height="110"><br>
+        <font face="Arial" color="#0000ff" size="1">Kevin Vandam's Bass
+Strategies<br>
+        </font></a><font face="Arial" color="#000000" size="-2">Kevin
+Vandam</font></p>
+      </td>
+      <td valign="top" align="center" width="126">
+        <p align="center"><a href="http://www.amazon.com/exec/obidos/ASIN/0965040917/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/0965040917.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="67" height="110"><br>
+        <font face="Arial" color="#0000ff" size="1">Secrets of a Champion<br>
+        </font></a><font face="Arial" color="#000000" size="-2">Kevin
+VanDam</font></p>
+      </td>
+      <td valign="top" align="center" width="126">
+        <p align="center"><a href="http://www.amazon.com/exec/obidos/ASIN/0553804456/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/0553804456.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="74" height="110"><br>
+        <font face="Arial" color="#0000ff" size="1">Fishing on the Edge<br>
+        </font></a><font face="Arial" color="#000000" size="-2">Mike
+Iaconelli</font></p>
+      </td>
+      <td valign="top" align="center" width="126"><a href="http://www.amazon.com/exec/obidos/ASIN/0883173131/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/0883173131.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="74" height="110"><br>
+        <font face="Arial" color="#0000ff" size="1">Big Bass Zone<br>
+        </font></a><font face="Arial" color="#000000" size="-2">Bill
+Siemantel</font></td>
+      <td valign="top" align="center" width="126"><a href="http://www.amazon.com/exec/obidos/ASIN/1879206226/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/1879206226.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="58" height="90"><font face="Arial" color="#0000ff" size="1"><br>
+Denny Brauer's Jig Fishing Secrets</font></a><font face="Arial" color="#000000" size="-2"><br>
+Denny Brauer</font></td>
+      <td valign="top" align="center" width="126"><a href="http://www.amazon.com/exec/obidos/ASIN/1879206153/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/1879206153.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="53" height="90"><font face="Arial" color="#0000ff" size="1"><br>
+Denny Brauer's Winning Tournament Tactics</font></a><font face="Arial" color="#000000" size="-2"><br>
+Denny Bauer</font></td>
+      <td valign="top" align="center" width="126"><a href="http://www.amazon.com/exec/obidos/ASIN/0525948635/flyingflamingo?creative=327641&amp;camp=14573&amp;link_code=as1" target="_blank"><img src="http://rcm-images.amazon.com/images/P/0525948635.01._SCTZZZZZZZ_.jpg" vspace="3" border="0" width="71" height="110"><br>
+        <font face="Arial" color="#0000ff" size="1">Sowbelly<br>
+        </font></a><font face="Arial" color="#000000" size="-2">Monte
+Burke</font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<p align="center"><small>Thank you for visiting</small>. <small>Please
+enjoy!<br>
+</small><img src="../../images/bassdozer-tri-fish.jpg" alt="Bass fishing lures, bass boats" width="404" height="25"><br>
+<small><strong>Worldwide Bass Fishing</strong></small></p>
+<div align="center">
+  <table border="1" bgcolor="#CCCCCC" cellpadding="2" cellspacing="1" bordercolordark="#FFFFFF" width="468">
+    <center>
+    <tr>
+      <td valign="middle" align="center"><IFRAME SRC="http://www.fishclix.com/cgibin/ads/ads.cgi?iframe;member=bassdozer" MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=NO WIDTH=468 HEIGHT=60> 
+        <SCRIPT LANGUAGE="JavaScript"><!-- 
+random = parseInt(Math.random()*1000) 
+banner = '<A HREF="http://www.fishclix.com/cgibin/ads/ads.cgi?member=bassdozer;banner=NonSSI;' 
+banner += 'page=' + random + '" TARGET="_blank">'; 
+banner += '<IMG SRC="http://www.fishclix.com/cgibin/ads/ads.cgi?member=bassdozer;' 
+banner += 'page=' + random + '" WIDTH=468 HEIGHT=60 BORDER=1></A>' 
+document.write(banner) 
+// --></SCRIPT></IFRAME> 
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" align="center"><img src="http://www.fishhoo.com/but-fishhoo-team.gif" border="1" width="40" height="40"><a href="http://www.fishhoo.com/cgi-bin/exchange/ads.pl?member=ilmagazine;banner=NonSSI;page=01" target="_blank"><img src="http://www.fishhoo.com/cgi-bin/exchange/ads.pl?member=ilmagazine;page=01" border="1"></a></td>
+    </tr>
+    <tr>
+      <td valign="middle" align="center"><a href="http://www.hitsunlimited.com/cgi-bin/100topbt/100top.cgi?ID=1131" target="_blank"><img src="http://www.hitsunlimited.com/cgi-bin/100topbt/100top.cgi?IDimg=1131" border="0" hspace="1"></a><a href="http://www.hitsunlimited.com/cgi-bin/100topbass/100top.cgi?ID=99" target="_blank"><img src="http://www.hitsunlimited.com/cgi-bin/100topbass/100top.cgi?IDimg=99" border="0" hspace="1"></a><a href="http://www.findthefish.com/topsites/in.php?id=178" target="_blank"><img src="http://www.findthefish.com/topsites/button.php?id=178" border="0" hspace="1"></a><a href="http://www.tackletour.com/topsites/" target="_blank"><img src="http://www.tackletour.com/topsites/button.php?u=russbassdozer" border="0" hspace="1"></a><a href="http://www.bigfishtackle.com/cgi-bin/top50/topsites.cgi?action=in&amp;id=440" target="_blank"><img src="http://www.bigfishtackle.com/cgi-bin/top50/topsites.cgi?action=button&amp;id=440" border="0" hspace="1"></a></td>
+    </tr>
+    </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>
