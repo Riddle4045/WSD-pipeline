@@ -11,50 +11,70 @@ import numpy as np
 import os
 
 
-folder = "/home/yp/projects/data/UIUC/bass";
+folder = "/home/yp/projects/data/uiuc/bass";
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
 baseimages = folder + "/base";
+featfile = folder + "/feat.txt"
 trainimages = folder + "/train";
 testimages = folder + "/test";
-trainingData = folder + "/trainingData.txt";
-testingData = folder + "/testingData.txt";
+trainingData = folder + "/training.txt";
+testingData = folder + "/testing.txt";
 features = []
 train_features = []
-n_clusters = 200;
-k_means=  MiniBatchKMeans(n_clusters=n_clusters,max_iter=300,batch_size=500,verbose=1);
+n_clusters = 200
+k_means=  MiniBatchKMeans(n_clusters=n_clusters,max_iter=1,batch_size=500,verbose=1);
 
-def getSiftfeatures(baseimages,features):	
+def getSiftfeatures(baseimages,featfile):
+	print "feature extraction begins"	
 	#walk  through the directory and write in outputfile
 	totalfeatures = 0;
+	x = 0
 	#print baseimages
-	for subdir, dirs, files in os.walk(baseimages):
+	f = open(featfile, 'w')
+	for root, dirs, files in os.walk(baseimages):
 		for file in files:
-			filename = os.path.join(subdir,file);
+			filename = os.path.join(root,file);
 			img = cv2.imread(filename);
 			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 			#sift = cv2.SIFT()
 			sift = cv2.xfeatures2d.SIFT_create() 
 			kp, des = sift.detectAndCompute(gray,None);
-			print "feature extraction : " + file 
-			totalfeatures = totalfeatures + len(des);
-			for (x,y),value in np.ndenumerate(des):
-				temp =  des[x];
-				features.append(temp);	
-	return features,totalfeatures;
+			print str(x) + " feature extraction : " +  str(len(des)) + " " + file 
+			x += 1
+			totalfeatures += len(des);
+			for y in des:
+				#print type(y)
+				#z = y.flatten()
+				#print type(z)
+				for z in y:
+					#print type(z)
+					f.write(str(z))
+					f.write(' ') 
+				f.write('\n')
+			#for (x,y),value in np.ndenumerate(des):
+			#	temp =  des[x];
+			#	f.write(temp);
+			#	f.write("\n");
+			#	features.append(temp);
+	print "feature extraction is done: " + str(totalfeatures)
+	return totalfeatures;
 
 
 def makeVisualWords(features,k_means):
+	print "k-means begins"
 	print len(features) 
 	print len(features[0])
 	k_means.fit(features);
 	labels = k_means.labels_;
 	print labels;
 	print k_means.get_params();
+	print "k-means ends"
 
 
 
-def quantinzeimages(trainimages,k_means,trainingData,n_clusters):
-	for subdir, dirs, files in os.walk(baseimages):
+def quantinzeimages(images,k_means,data,n_clusters):
+	print "k-means "
+	for subdir, dirs, files in os.walk(images):
 		for file in files:
 			img_features = [];	
 			fileName = os.path.join(subdir,file);
@@ -66,9 +86,9 @@ def quantinzeimages(trainimages,k_means,trainingData,n_clusters):
 				temp =  des[x];
 				img_features.append(temp);
 			p =  k_means.predict(img_features);
-			writeHistogramtoFile(p,file,trainingData,n_clusters);
+			writeHistogramtoFile(p,file,data,n_clusters);
 			
-def writeHistogramtoFile(p,file,trainingData,n_clusters):
+def writeHistogramtoFile(p,file,data,n_clusters):
 	hist = [ 0 for i in range(0,n_clusters) ];
 	print p
 	for index in p:
@@ -76,18 +96,18 @@ def writeHistogramtoFile(p,file,trainingData,n_clusters):
 		hist[index] = hist[index] + 1;
 	for i in range(len(hist)):
 		hist[i] = hist[i]/128;
-	f = open(trainingData,"a");
+	f = open(data,"a");
 	print hist
 	feature = ' '.join(str(e) for e in hist);
 	feature = feature + "\n"
 	f.write(feature)
 	f.close();
 	
-features,a = getSiftfeatures(baseimages,features);
-makeVisualWords(features,k_means);
-print "And we have words!"
-quantinzeimages(trainimages,k_means,trainingData,n_clusters);
-print "train images quantized\n\n" 
-quantinzeimages(testimages,k_means,testingData,n_clusters);
-print "testing images quantized\n\n"
+a = getSiftfeatures(baseimages,featfile);
+#makeVisualWords(features,k_means);
+#print "And we have words!"
+#quantinzeimages(trainimages,k_means,trainingData,n_clusters);
+#print "train images quantized\n\n" 
+#quantinzeimages(testimages,k_means,testingData,n_clusters);
+#print "testing images quantized\n\n"
 
