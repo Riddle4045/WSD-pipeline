@@ -29,60 +29,59 @@ def getSiftfeatures(baseimages,features):
 	#print baseimages
 	for subdir, dirs, files in os.walk(baseimages):
 		for file in files:
-					filename = os.path.join(subdir,file);
-					img = cv2.imread(filename);
-					gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-					#sift = cv2.SIFT()
-					sift = cv2.xfeatures2d.SIFT_create() 
-					kp, des = sift.detectAndCompute(gray,None);
-					print "doing : " + file 
-					totalfeatures = totalfeatures + len(des);
-					for (x,y),value in np.ndenumerate(des):
-									temp =  des[x];
-									features.append(temp);
-					
+			filename = os.path.join(subdir,file);
+			img = cv2.imread(filename);
+			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+			#sift = cv2.SIFT()
+			sift = cv2.xfeatures2d.SIFT_create() 
+			kp, des = sift.detectAndCompute(gray,None);
+			print "feature extraction : " + file 
+			totalfeatures = totalfeatures + len(des);
+			for (x,y),value in np.ndenumerate(des):
+				temp =  des[x];
+				features.append(temp);	
 	return features,totalfeatures;
 
 
 def makeVisualWords(features,k_means):
-				print len(features) 
-				print len(features[0])
-				k_means.fit(features);
-				labels = k_means.labels_;
-				print labels;
-				print k_means.get_params();
+	print len(features) 
+	print len(features[0])
+	k_means.fit(features);
+	labels = k_means.labels_;
+	print labels;
+	print k_means.get_params();
 
 
 
 def quantinzeimages(trainimages,k_means,trainingData,n_clusters):
-		for subdir, dirs, files in os.walk(baseimages):
-					for file in files:
-								img_features = [];	
-								fileName = os.path.join(subdir,file);
-								img = cv2.imread(fileName);
-								gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-								sift = cv2.SIFT()
-								kp, des = sift.detectAndCompute(gray,None);
-								for (x,y),value in np.ndenumerate(des):
-											 temp =  des[x];
-											 img_features.append(temp);
-								p =  k_means.predict(img_features);
-								writeHistogramtoFile(p,file,trainingData,n_clusters);
+	for subdir, dirs, files in os.walk(baseimages):
+		for file in files:
+			img_features = [];	
+			fileName = os.path.join(subdir,file);
+			img = cv2.imread(fileName);
+			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+			sift = cv2.SIFT()
+			kp, des = sift.detectAndCompute(gray,None);
+			for (x,y),value in np.ndenumerate(des):
+				temp =  des[x];
+				img_features.append(temp);
+			p =  k_means.predict(img_features);
+			writeHistogramtoFile(p,file,trainingData,n_clusters);
 			
 def writeHistogramtoFile(p,file,trainingData,n_clusters):
-			hist = [ 0 for i in range(0,n_clusters) ];
-			print p
-			for index in p:
-		#				print index
-						hist[index] = hist[index] + 1;
-			for i in range(len(hist)):
-					    hist[i] = hist[i]/128;
-			f = open(trainingData,"a");
-			print hist
-			feature = ' '.join(str(e) for e in hist);
-			feature = feature + "\n"
-			f.write(feature)
-			f.close();
+	hist = [ 0 for i in range(0,n_clusters) ];
+	print p
+	for index in p:
+		#print index
+		hist[index] = hist[index] + 1;
+	for i in range(len(hist)):
+		hist[i] = hist[i]/128;
+	f = open(trainingData,"a");
+	print hist
+	feature = ' '.join(str(e) for e in hist);
+	feature = feature + "\n"
+	f.write(feature)
+	f.close();
 	
 features,a = getSiftfeatures(baseimages,features);
 makeVisualWords(features,k_means);
