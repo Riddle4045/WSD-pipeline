@@ -11,13 +11,13 @@ import numpy as np
 import os
 
 
-folder = "";
+folder = "/home/yp/projects/data/UIUC/bass";
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
-baseimages = folder + "/tanker";
+baseimages = folder + "/base";
 trainimages = folder + "/train";
 testimages = folder + "/test";
-trainingData = "trainingData.txt";
-testingData = "testingData.txt";
+trainingData = folder + "/trainingData.txt";
+testingData = folder + "/testingData.txt";
 features = []
 train_features = []
 n_clusters = 200;
@@ -26,12 +26,14 @@ k_means=  MiniBatchKMeans(n_clusters=n_clusters,max_iter=300,batch_size=500,verb
 def getSiftfeatures(baseimages,features):	
 	#walk  through the directory and write in outputfile
 	totalfeatures = 0;
+	#print baseimages
 	for subdir, dirs, files in os.walk(baseimages):
 		for file in files:
-					fileName = os.path.join(subdir,file);
-					img = cv2.imread(fileName);
+					filename = os.path.join(subdir,file);
+					img = cv2.imread(filename);
 					gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-					sift = cv2.SIFT()
+					#sift = cv2.SIFT()
+					sift = cv2.xfeatures2d.SIFT
 					kp, des = sift.detectAndCompute(gray,None);
 					print "doing : " + file 
 					totalfeatures = totalfeatures + len(des);

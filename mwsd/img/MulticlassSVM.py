@@ -60,8 +60,8 @@ print probs
 ans = clf.predict(testing_features)
 print ans
 
-file = open("result.txt","r+")
+file = open("result.txt","w")
 file.writelines(["%s\n" % item  for item in ans])
 
-file = open("result_probs.txt","r+")
+file = open("result_probs.txt","w")
 file.writelines(["%s\n" % item  for item in probs])
