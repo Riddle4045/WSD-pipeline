@@ -1,3 +1,8 @@
 1. install pip, numpy, scipy, scikit-learn, opencv(nonfree), nltk and wordnet
 
-2. create a python wrapper for both text and images
+2. code structure 
+	text_process.py: to extract the titles in image filenames to get the testing data for text-based disambiguation  
+	img/: the code for image-based classification
+	txt/: the code for text-based classification
+
+3. create a python wrapper for both text and images

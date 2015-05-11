@@ -11,7 +11,7 @@ import numpy as np
 import os
 
 
-folder = "/home/yp/projects/data/uiuc/bass";
+folder = "/home/yp/projects/data/uiuc/bass/img";
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
 baseimages = folder + "/base";
 featfile = folder + "/feat.txt"
