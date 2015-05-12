@@ -29,8 +29,10 @@ def getSiftfeatures(baseimages,featfile):
 	#walk  through the directory and write in outputfile
 	totalfeatures = 0;
 	x = 0
+	features = []
 	#print baseimages
 	f = open(featfile, 'w')
+	# two ways of storing the features, one in memory, one in disk
 	for root, dirs, files in os.walk(baseimages):
 		for file in files:
 			filename = os.path.join(root,file);
@@ -43,21 +45,15 @@ def getSiftfeatures(baseimages,featfile):
 			x += 1
 			totalfeatures += len(des);
 			for y in des:
-				#print type(y)
-				#z = y.flatten()
-				#print type(z)
+				feature = []
 				for z in y:
-					#print type(z)
+					feature.append(z)
 					f.write(str(z))
 					f.write(' ') 
 				f.write('\n')
-			#for (x,y),value in np.ndenumerate(des):
-			#	temp =  des[x];
-			#	f.write(temp);
-			#	f.write("\n");
-			#	features.append(temp);
+				features.append(feature)
 	print "feature extraction is done: " + str(totalfeatures)
-	return totalfeatures;
+	return features, totalfeatures;
 
 
 def makeVisualWords(features,k_means):
@@ -77,14 +73,17 @@ def quantinzeimages(images,k_means,data,n_clusters):
 	for subdir, dirs, files in os.walk(images):
 		for file in files:
 			img_features = [];	
-			fileName = os.path.join(subdir,file);
-			img = cv2.imread(fileName);
+			filename = os.path.join(subdir,file);
+			print filename
+			img = cv2.imread(filename);
 			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-			sift = cv2.SIFT()
+			sift = cv2.xfeatures2d.SIFT_create()
 			kp, des = sift.detectAndCompute(gray,None);
-			for (x,y),value in np.ndenumerate(des):
-				temp =  des[x];
-				img_features.append(temp);
+			for y in des:
+				feature = []
+				for z in y:
+					feature.append(z)
+				img_features.append(feature);
 			p =  k_means.predict(img_features);
 			writeHistogramtoFile(p,file,data,n_clusters);
 			
@@ -102,12 +101,30 @@ def writeHistogramtoFile(p,file,data,n_clusters):
 	feature = feature + "\n"
 	f.write(feature)
 	f.close();
+
+def readFeatures(featfile):
+	print "reading features from files"
+	f = open(featfile, 'r')
+	x = 0
+	features = []
+	for line in f:
+		ns = line.split()
+		feature = []
+		for i in xrange(0, len(ns)):
+			feature.append(float(ns[i]))
+		features.append(feature)
+		if x != 0 and x % 10000 == 0:
+			print 'line ' + str(x) + ' is processed'
+		x += 1
+	print "file reading is complete"
+	return features
 	
-a = getSiftfeatures(baseimages,featfile);
-#makeVisualWords(features,k_means);
-#print "And we have words!"
-#quantinzeimages(trainimages,k_means,trainingData,n_clusters);
-#print "train images quantized\n\n" 
-#quantinzeimages(testimages,k_means,testingData,n_clusters);
-#print "testing images quantized\n\n"
+features, a = getSiftfeatures(baseimages,featfile);
+#features = readFeatures(featfile)
+makeVisualWords(features,k_means)
+print "And we have words!"
+quantinzeimages(trainimages,k_means,trainingData,n_clusters);
+print "train images quantized\n\n" 
+quantinzeimages(testimages,k_means,testingData,n_clusters);
+print "testing images quantized\n\n"
 
