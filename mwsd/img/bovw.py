@@ -14,7 +14,7 @@ import os
 folder = "/home/yp/projects/data/uiuc/bass/img";
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
 baseimages = folder + "/base";
-featfile = folder + "/feat.txt"
+basefeatfile = folder + "/basefeat.txt"
 trainimages = folder + "/train";
 testimages = folder + "/test";
 trainingData = folder + "/training.txt";
@@ -22,20 +22,21 @@ testingData = folder + "/testing.txt";
 features = []
 train_features = []
 n_clusters = 200
-k_means=  MiniBatchKMeans(n_clusters=n_clusters,max_iter=1,batch_size=500,verbose=1);
+k_means=  MiniBatchKMeans(n_clusters=n_clusters,max_iter=100,batch_size=500,verbose=1)
 
-def getSiftfeatures(baseimages,featfile):
+def getSiftfeatures(baseimages,basefeatfile):
 	print "feature extraction begins"	
 	#walk  through the directory and write in outputfile
 	totalfeatures = 0;
 	x = 0
 	features = []
 	#print baseimages
-	f = open(featfile, 'w')
+	f = open(basefeatfile, 'w')
 	# two ways of storing the features, one in memory, one in disk
 	for root, dirs, files in os.walk(baseimages):
 		for file in files:
 			filename = os.path.join(root,file);
+			#print filename
 			img = cv2.imread(filename);
 			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 			#sift = cv2.SIFT()
@@ -70,10 +71,11 @@ def makeVisualWords(features,k_means):
 
 def quantinzeimages(images,k_means,data,n_clusters):
 	print "k-means "
-	for subdir, dirs, files in os.walk(images):
+	f = open(data,"w");
+	for root, dirs, files in os.walk(images):
 		for file in files:
-			img_features = [];	
-			filename = os.path.join(subdir,file);
+			img_features = []	
+			filename = os.path.join(root,file);
 			print filename
 			img = cv2.imread(filename);
 			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -83,24 +85,24 @@ def quantinzeimages(images,k_means,data,n_clusters):
 				feature = []
 				for z in y:
 					feature.append(z)
-				img_features.append(feature);
+				img_features.append(feature)
 			p =  k_means.predict(img_features);
-			writeHistogramtoFile(p,file,data,n_clusters);
-			
-def writeHistogramtoFile(p,file,data,n_clusters):
-	hist = [ 0 for i in range(0,n_clusters) ];
+			writeHistogramtoFile(p,f,data,n_clusters);
+	f.close();	
+		
+def writeHistogramtoFile(p,f,data,n_clusters):
+	hist = [ 0 for i in range(n_clusters) ];
 	print p
 	for index in p:
 		#print index
-		hist[index] = hist[index] + 1;
-	for i in range(len(hist)):
-		hist[i] = hist[i]/128;
-	f = open(data,"a");
+		hist[index] += 1;
+	#for i in range(len(hist)):
+	#	hist[i] = hist[i]/128;
 	print hist
 	feature = ' '.join(str(e) for e in hist);
 	feature = feature + "\n"
 	f.write(feature)
-	f.close();
+	#f.close();
 
 def readFeatures(featfile):
 	print "reading features from files"
@@ -119,8 +121,8 @@ def readFeatures(featfile):
 	print "file reading is complete"
 	return features
 	
-features, a = getSiftfeatures(baseimages,featfile);
-#features = readFeatures(featfile)
+#features, a = getSiftfeatures(baseimages,basefeatfile);
+features = readFeatures(basefeatfile)
 makeVisualWords(features,k_means)
 print "And we have words!"
 quantinzeimages(trainimages,k_means,trainingData,n_clusters);
