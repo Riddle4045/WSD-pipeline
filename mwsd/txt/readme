@@ -1,0 +1,2 @@
+text_process.py: used to get testing samples from image filenames
+extract_wiki.py: used to extract training samples from Wikipedia
