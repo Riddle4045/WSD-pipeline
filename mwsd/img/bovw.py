@@ -9,9 +9,13 @@ from sklearn.cluster import MiniBatchKMeans
 import cv2
 import numpy as np
 import os
+import sys
 
-
-folder = "/home/yp/projects/data/uiuc/bass/img";
+folder = "/home/yp/projects/data/uiuc/";
+if len(sys.argv) >= 2:
+	folder += sys.argv[1] + "/img"
+else:
+	folder += "bass/img"
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
 baseimages = folder + "/base";
 basefeatfile = folder + "/basefeat.txt"
@@ -73,9 +77,9 @@ def quantinzeimages(images,k_means,data,n_clusters):
 	print "k-means "
 	f = open(data,"w");
 	for root, dirs, files in os.walk(images):
-		for file in files:
+		for fi in files:
 			img_features = []	
-			filename = os.path.join(root,file);
+			filename = os.path.join(root,fi);
 			print filename
 			img = cv2.imread(filename);
 			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -87,18 +91,23 @@ def quantinzeimages(images,k_means,data,n_clusters):
 					feature.append(z)
 				img_features.append(feature)
 			p =  k_means.predict(img_features);
-			writeHistogramtoFile(p,f,data,n_clusters);
+			writeHistogramtoFile(p,f, fi, data,n_clusters);
 	f.close();	
 		
-def writeHistogramtoFile(p,f,data,n_clusters):
+def writeHistogramtoFile(p,f,fi,data,n_clusters):
 	hist = [ 0 for i in range(n_clusters) ];
-	print p
+	#print p
 	for index in p:
 		#print index
 		hist[index] += 1;
 	#for i in range(len(hist)):
 	#	hist[i] = hist[i]/128;
 	print hist
+	if fi.startswith("1"):
+		f.write("1")
+	else:
+		f.write("2")
+	f.write("\t")
 	feature = ' '.join(str(e) for e in hist);
 	feature = feature + "\n"
 	f.write(feature)
@@ -121,12 +130,12 @@ def readFeatures(featfile):
 	print "file reading is complete"
 	return features
 	
-#features, a = getSiftfeatures(baseimages,basefeatfile);
-features = readFeatures(basefeatfile)
+features, a = getSiftfeatures(baseimages,basefeatfile);
+#features = readFeatures(basefeatfile)
 makeVisualWords(features,k_means)
 print "And we have words!"
 quantinzeimages(trainimages,k_means,trainingData,n_clusters);
 print "train images quantized\n\n" 
 quantinzeimages(testimages,k_means,testingData,n_clusters);
 print "testing images quantized\n\n"
-
+print "program ends"
