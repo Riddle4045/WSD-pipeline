@@ -10,26 +10,31 @@ from numpy import zeros
 import time as dt
 
 def main(argv):
+	# get all the filenames
 	word = argv[1]
-	seed = argv[2]
-	train = argv[3]
-	test = argv[4]
-	folder = argv[5]
+	folder = argv[2]
+	seed = folder + "/" + word + ".seed"
+	train = folder + "/" + word + ".train"
+	test = folder + "/" + word + ".test"
 	classifier = folder + "/" + word + ".classifier"
 	results = folder + "/" + word + ".disambiguated"
-	#get definition of word from WordNet.
-	print 'Word to be disambiguated: %s. The senses in the WordNet are:' % word
+	print 'Word to be disambiguated: %s.' % word
 	if os.path.isfile(seed) == False or os.path.isfile(train) == False or os.path.isfile(test) == False:
 		print 'Error: the input file(s) does not exist.'
 		sys.exit(2)
+	
+
 	#Train classifier
 	n1=dt.time()
 	sys.stdout.write('Training classifier ... ')
 	cmd = './uwsd -train '+ train + ' '+ seed +' '+ classifier+' ' + word
+	#cmd = './uwsd -train '+ test + ' '+ seed +' '+ classifier+' ' + word
 	os.system(cmd)
 	n2=dt.time()
 	print 'done. Elapsed time is %.4f seconds.' % ((n2-n1))
 	n1=dt.time()
+	
+
 	#Classify the text
 	sys.stdout.write('Classifying text ... ')
 	cmd = './uwsd -test '+ classifier +' '+ test +' ' + word
@@ -44,7 +49,7 @@ def main(argv):
 				
 				
 if __name__ == "__main__":
-	if len(sys.argv)  != 6:
+	if len(sys.argv)  != 3:
 		print 'Not enough arguments.';
 		sys.exit(2);
 	main(sys.argv)
