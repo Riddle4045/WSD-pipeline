@@ -1,7 +1,0 @@
-1. install pip, numpy, scipy, scikit-learn, opencv(nonfree), nltk and wordnet
-
-2. code structure 
-	img/: the code for image-based classification
-	txt/: the code for text-based classification
-
-3. create a python wrapper for both text and images
